@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<meta charset="UTF-8"/>
+<html>
+<head>
+	<title>Exercici Lletres Repetides - Fase 3</title>
+</head>
+<body>
+<script type="text/javascript">
+	var nom = ['V','I','C','T','I','O','R'];
+	var times = new Array;
+	var map =  Array.prototype.map;
+	var y = 0;
+	var repe = 0;
+	while (nom[y] != undefined){
+	letter = nom[y];
+	times[y]=1;
+	var i = y+1;
+		while (nom[i] != undefined) {
+			if (letter == nom[i]) {
+				times[y]++;
+				repe = i; }
+			i++; 
+		}
+	map[y] = letter + ": " + times[y]
+	y++;
+	if (nom[y] == nom[repe]) {y++;}
+	}
+	console.log(map);
+</script>
+</body>
+</html>
+
