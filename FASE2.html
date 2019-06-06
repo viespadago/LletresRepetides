@@ -9,10 +9,11 @@
 	var name = ['V', 'I', '1', 'C', 'T', 'O', 'R'];
 	var i = 0;
 	while (name[i] != undefined) {
-		if (name[i] == 'A' || name[i] == 'E' || name[i] == 'I' || name[i] == 'O' || name[i] == 'U'){console.log("He trobat la VOCAL: " + name[i]);} 	
-			else if (name[i] == '0' || name[i] == '1' || name[i] == '2' || name[i] == '3' || name[i] == '4'|| name[i] == '5' || name[i] == '6' || name[i] == '7' || name[i] == '8' || name[i] == '9'){
-		console.log("Els noms de persones no contenen el NÚMERO: " + name[i]);} 
-				else {console.log("He trobat la CONSONANT: " + name[i]);}
+		if (isNaN (name[i])){
+			if (name[i] == 'A' || name[i] == 'E' || name[i] == 'I' || name[i] == 'O' || name[i] == 'U'){console.log("He trobat la VOCAL: " + name[i]);} 		
+			else {console.log("He trobat la CONSONANT: " + name[i]);}
+			}
+		else {console.log("Els noms de persones no contenen el NÚMERO: " + name[i]);} 
 	i=i+2;}
 </script>
 </body>
