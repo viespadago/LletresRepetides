@@ -6,24 +6,13 @@
 </head>
 <body>
 <script type="text/javascript">
-	var nom = ['V','I','C','T','I','O','R'];
-	var times = new Array;
-	var map =  Array.prototype.map;
-	var y = 0;
-	var repe = 0;
-	while (nom[y] != undefined){
-	letter = nom[y];
-	times[y]=1;
-	var i = y+1;
-		while (nom[i] != undefined) {
-			if (letter == nom[i]) {
-				times[y]++;
-				repe = i; }
-			i++; 
-		}
-	map[y] = letter + ": " + times[y]
-	y++;
-	if (nom[y] == nom[repe]) {y++;}
+	var nom = ['V','I','C','T','O','R','I','N','O'];
+	var map =  new Map();
+	var i = 0;
+	while (nom[i] != undefined) {
+	if (map.has(nom[i])) {map.set(nom[i], (map.get(nom[i])+1));}
+	else {map.set(nom[i], 1);}
+	i++; 
 	}
 	console.log(map);
 </script>
